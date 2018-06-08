@@ -11,6 +11,7 @@ node {
     withSonarQubeEnv('My SonarQube Server') {
       sh "${scannerHome}/bin/sonar-scanner  -Dsonar.sources=./routes"
     }
+  }
 
     
     stage('Dependency Check') {
