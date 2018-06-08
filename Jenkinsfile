@@ -6,7 +6,7 @@ node {
   
    stage('SonarQube analysis') {
     // requires SonarQube Scanner 2.8+
-    def scannerHome = tool 'SonarQube Scanner 3.2';
+    def scannerHome = tool 'sonarqubeScanner';
     withSonarQubeEnv('My SonarQube Server') {
       sh "${scannerHome}/bin/sonar-scanner  -Dsonar.sources=./routes"
     }
