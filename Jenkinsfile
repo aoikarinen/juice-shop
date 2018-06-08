@@ -2,8 +2,7 @@ node {
     stage('Clone Repository') {
         checkout scm
     }    
-    
-    node {
+   
   
    stage('SonarQube analysis') {
     // requires SonarQube Scanner 2.8+
