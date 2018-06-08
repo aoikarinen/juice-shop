@@ -8,7 +8,7 @@ node {
     // requires SonarQube Scanner 2.8+
     def scannerHome = tool 'sonarqubeScanner';
     withSonarQubeEnv('sonarqubeServer') {
-      sh "${scannerHome}/bin/sonar-scanner  -Dsonar.sources=./routes -Dsonar.host.url=http://10.48.253.181:9000 -Dsonar.login=50cf36311e42aec7843558c7ffddd4eac81fb97a"
+      sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=annenpipeline -Dsonar.sources=./routes -Dsonar.host.url=http://10.48.253.181:9000 -Dsonar.login=50cf36311e42aec7843558c7ffddd4eac81fb97a"
     }
   }
 
